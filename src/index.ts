@@ -1,10 +1,8 @@
 import express from "express";
-import path from "node:path";
 import { config } from "dotenv";
 import bootstrap from "./app.controller";
-import { verifyToken } from "./utils/jwt/token";
 
-config({ path: path.resolve("./config/.env") });
+config();
 
 const app: express.Application = express();
 const port: string | number = process.env.PORT || 3000;
